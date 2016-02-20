@@ -1,0 +1,20 @@
+call plug#begin('~/.vim/plugged')
+Plug 'vim-airline/vim-airline'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+Plug 'tikhomirov/vim-glsl'
+call plug#end()
+
+:set ignorecase
+:set smartcase
+:set expandtab
+:set tabstop=4
+:set softtabstop=4
+:set shiftwidth=4
+:set clipboard=unnamed
+:set gdefault
+:set visualbell
+:set wrapscan
+:set relativenumber
+:set number
+:set laststatus=2
