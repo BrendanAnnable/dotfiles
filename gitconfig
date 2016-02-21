@@ -9,3 +9,5 @@
 [user]
 	name = Brendan Annable
 	email = brendan@annable.id.au
+[push]
+	default = simple
