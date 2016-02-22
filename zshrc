@@ -31,3 +31,7 @@ bindkey '^w' backward-kill-word
 bindkey '^r' history-incremental-search-backward
 
 export KEYTIMEOUT=1
+
+alias '...'='cd ../../'
+alias '....'='cd ../../../'
+alias '.....'='cd ../../../../'
