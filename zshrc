@@ -12,6 +12,10 @@ fi
 
 # Customize to your needs...
 
+path=("$(brew --prefix coreutils)"/libexec/gnubin $path)
+[[ -r ~/.dir_colors ]] && eval "$(dircolors ~/.dir_colors)"
+alias ls='ls --color'
+
 # http://dougblack.io/words/zsh-vi-mode.html
 bindkey -v
 
