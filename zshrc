@@ -15,6 +15,9 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+#
+setopt APPEND_HISTORY
+
 alias ls='ls --color'
 
 # http://dougblack.io/words/zsh-vi-mode.html
@@ -40,3 +43,30 @@ export KEYTIMEOUT=1
 alias '...'='cd ../../'
 alias '....'='cd ../../../'
 alias '.....'='cd ../../../../'
+alias 'first'="sed '1q;d'"
+alias 'second'="sed '2q;d'"
+alias 'pb'='pbcopy'
+alias 'cpf'='pfd | tr -d "\n" | pbcopy'
+alias 'del'='rmtrash'
+
+line() {
+    sed "${1}q;d"
+}
+
+copy() {
+    sed "${1}q;d" | pbcopy
+}
+
+ports() {
+    if [ "$#" -eq 0 ]
+    then
+        lsof -i4 -n -P | grep LISTEN
+    else
+        lsof -i ":$1" -n -P
+    fi
+}
+
+# AWS
+source /usr/local/share/zsh/site-functions/_aws
+
+alias sudo='sudo '
