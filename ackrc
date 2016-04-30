@@ -3,6 +3,9 @@
 --pager=less -r
 --type-set=xlf:ext:xlf
 --type-add=js:ext:es6
+--type-add=es5:ext:js
+--type-add=es6:ext:es6
+--type-add=zsh:ext:zsh
 --ignore-dir=target
 --ignore-dir=.idea
 --ignore-file=firstlinematch:/.{200}/
