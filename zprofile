@@ -72,3 +72,6 @@ if [[ ! -d "$TMPDIR" ]]; then
 fi
 
 TMPPREFIX="${TMPDIR%/}/zsh"
+
+# Custom
+defaults write com.jetbrains.intellij ApplePressAndHoldEnabled -bool false
