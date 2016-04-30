@@ -10,4 +10,22 @@
 	name = Brendan Annable
 	email = brendan@annable.id.au
 [push]
-	default = simple
+	default = current
+[filter "lfs"]
+	smudge = git-lfs smudge %f
+	required = true
+	clean = git-lfs clean %f
+[alias]
+    # https://git-scm.com/book/en/v2/Git-Basics-Git-Aliases
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	unstage = reset HEAD --
+	last = log -1 HEAD
+	rbm = !git fetch origin master && git rebase origin/master
+	rbg = !git fetch origin green && git rebase origin/green
+    hash = rev-parse --short --sq HEAD
+    gethash = !git hash | pbcopy
+    d = diff --cached
+    fix = commit --amend --no-edit
