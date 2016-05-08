@@ -29,3 +29,6 @@
     gethash = !git hash | pbcopy
     d = diff --cached
     fix = commit --amend --no-edit
+    fixu = !git add -u && git commit --amend --no-edit
+    down = fetch --all --prune
+    dn = !git down
