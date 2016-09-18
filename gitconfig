@@ -16,19 +16,23 @@
 	required = true
 	clean = git-lfs clean %f
 [alias]
-    # https://git-scm.com/book/en/v2/Git-Basics-Git-Aliases
+  # https://git-scm.com/book/en/v2/Git-Basics-Git-Aliases
 	co = checkout
 	br = branch
 	ci = commit
 	st = status
+	rb = rebase
+  au = add -u
+	rbc = rebase --continue
+	rba = rebase --abort
 	unstage = reset HEAD --
 	last = log -1 HEAD
 	rbm = !git fetch origin master && git rebase origin/master
 	rbg = !git fetch origin green && git rebase origin/green
-    hash = rev-parse --short --sq HEAD
-    gethash = !git hash | pbcopy
-    d = diff --cached
-    fix = commit --amend --no-edit
-    fixu = !git add -u && git commit --amend --no-edit
-    down = fetch --all --prune
-    dn = !git down
+  hash = rev-parse --short --sq HEAD
+  gethash = !git hash | pbcopy
+  d = diff --cached
+  fix = commit --amend --no-edit
+  fixu = !git add -u && git commit --amend --no-edit
+  down = fetch --all --prune
+  dn = !git down
