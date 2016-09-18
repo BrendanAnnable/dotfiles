@@ -32,7 +32,7 @@ values."
      semantic
      ranger
      ;; markdown
-     ;; org
+     org
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
@@ -265,6 +265,10 @@ you should place your code here."
   (add-hook 'js-mode-hook 'js2-minor-mode)
   (add-hook 'js2-mode-hook 'ac-js2-mode)
   (setenv "PAGER" "cat")
+
+  (setq powerline-default-separator nil)
+  ;; http://stackoverflow.com/a/37512241/868679
+  (spaceline-compile)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
