@@ -17,6 +17,7 @@ fi
 # Customize to your needs...
 #
 setopt APPEND_HISTORY
+unsetopt SHARE_HISTORY
 
 alias ls='ls --color'
 
@@ -70,3 +71,13 @@ ports() {
 source /usr/local/share/zsh/site-functions/_aws
 
 alias sudo='sudo '
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# Enable comments in shell
+setopt interactivecomments
+
+# Fix HEAD^ - See https://github.com/robbyrussell/oh-my-zsh/issues/449#issuecomment-6973326
+setopt NO_NOMATCH
+
+export PATH="$PATH:/Users/brendan/bin"
