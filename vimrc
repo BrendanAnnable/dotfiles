@@ -14,9 +14,9 @@ call plug#end()
 set ignorecase
 set smartcase
 set expandtab
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 set clipboard=unnamed
 set gdefault
 set visualbell
@@ -31,7 +31,7 @@ syntax enable
 colorscheme material-theme
 
 " Keymaps
-noremap <Space> @q
+" noremap <Space> @q
 nnoremap <Tab> >>
 nnoremap <S-Tab> <<
 vnoremap <Tab> >gv
@@ -42,11 +42,17 @@ nmap gu :action FindUsages<CR>
 nmap gb :action Git.Branches<CR>
 nmap gc :action GotoClass<CR>
 nmap gf :action GotoFile<CR>
-nmap gp :action Git.Pull<CR>
-nmap gP :action Vcs.Push<CR>
-nmap gk :action ChangesView.Commit<CR>
-nmap gs :action FileStructurePopup<CR>
+"nmap gp :action Git.Pull<CR>
+"nmap gP :action Vcs.Push<CR>
+"nmap gk :action ChangesView.Commit<CR>
+"nmap gs :action FileStructurePopup<CR>
 nmap gv :action Vcs.QuickListPopupAction<CR>
-nmap s :action AceJumpAction<CR>
+"nmap s :action AceJumpAction<CR>
 nmap gx :action CloseActiveTab<CR>
-nmap gw :action JumpToLastWindow<CR>
+"nmap gw :action JumpToLastWindow<CR>
+nmap gn :action JumpToNextChange<CR>
+nmap gp :action JumptoLastChange<CR>
+
+" Misc
+nnoremap ev :vsplit $MYVIMRC<cr>
+
