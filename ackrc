@@ -7,6 +7,8 @@
 --type-add=es6:ext:es6
 --type-add=zsh:ext:zsh
 --type-add=soy:ext:soy
+--type-add=bash:ext:sh
+--type-add=proto:ext:proto
 --ignore-dir=target
 --ignore-dir=.idea
 --ignore-file=firstlinematch:/.{200}/
