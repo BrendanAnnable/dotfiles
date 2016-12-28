@@ -10,6 +10,8 @@ Plug 'tpope/vim-repeat'
 Plug 'jdkanani/vim-material-theme'
 call plug#end()
 
+let mapleader=" "
+
 " Standard settings
 set ignorecase
 set smartcase
@@ -38,21 +40,25 @@ vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
 
 " IntelliJ
-nmap gu :action FindUsages<CR>
-nmap gb :action Git.Branches<CR>
-nmap gc :action GotoClass<CR>
-nmap gf :action GotoFile<CR>
-"nmap gp :action Git.Pull<CR>
-"nmap gP :action Vcs.Push<CR>
-"nmap gk :action ChangesView.Commit<CR>
-"nmap gs :action FileStructurePopup<CR>
-nmap gv :action Vcs.QuickListPopupAction<CR>
+nmap <Leader>u :action FindUsages<CR>
+nmap <Leader>b :action Git.Branches<CR>
+nmap <Leader>c :action GotoClass<CR>
+nmap <Leader>n :action GotoFile<CR>
+nmap <Leader>p :action RecentFiles<CR>
+"nmap <Leader>p :action Git.Pull<CR>
+"nmap <Leader>P :action Vcs.Push<CR>
+"nmap <Leader>k :action ChangesView.Commit<CR>
+nmap <Leader>s :action FileStructurePopup<CR>
+nmap <Leader>v :action Vcs.QuickListPopupAction<CR>
 "nmap s :action AceJumpAction<CR>
-nmap gx :action CloseActiveTab<CR>
-"nmap gw :action JumpToLastWindow<CR>
-nmap gn :action JumpToNextChange<CR>
-nmap gp :action JumptoLastChange<CR>
+"nmap <Leader>x :action CloseActiveTab<CR>
+"nmap <Leader>w :action JumpToLastWindow<CR>
+"nmap <Leader>n :action JumpToNextChange<CR>
+"nmap <Leader>c :action JumptoLastChange<CR>
 
 " Misc
 nnoremap ev :vsplit $MYVIMRC<cr>
 
+
+" Enable airline buffer tabs
+let g:airline#extensions#tabline#enabled = 1
