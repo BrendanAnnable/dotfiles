@@ -25,12 +25,19 @@ values."
      ;; ----------------------------------------------------------------
      osx
      auto-completion
+     (auto-completion :variables
+                      auto-completion-return-key-behavior 'complete
+                      auto-completion-tab-key-behavior 'cycle
+                      auto-completion-complete-with-key-sequence nil
+                      auto-completion-complete-with-key-sequence-delay 0.1
+                      auto-completion-private-snippets-directory nil)
      ;; better-defaults
      emacs-lisp
      git
      javascript
      semantic
      ranger
+     ;; eyebrowse
      ;; markdown
      org
      ;; (shell :variables
@@ -226,7 +233,7 @@ values."
    ;; List of search tool executable names. Spacemacs uses the first installed
    ;; tool of the list. Supported tools are `ag', `pt', `ack' and `grep'.
    ;; (default '("ag" "pt" "ack" "grep"))
-   dotspacemacs-search-tools '("ack" "ag" "pt" "grep")
+   dotspacemacs-search-tools '("ag" "pt" "ack" "grep")
    ;; The default package repository used if no explicit repository has been
    ;; specified with an installed package.
    ;; Not used for now. (default nil)
@@ -257,14 +264,16 @@ explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   (global-linum-mode t)
   (linum-relative-mode t)
-  (add-to-list 'auto-mode-alist '("\\.es6$" . js-mode))
+  (add-to-list 'auto-mode-alist '("\\.es6$" . js2-mode))
   (setq-default indent-tabs-mode nil)
   (setq javascript-indent-level 2)
   (setq js-indent-level 2)
   (setq js2-basic-offset 2)
+  (setq js2-include-node-externs t)
   (add-hook 'js-mode-hook 'js2-minor-mode)
   (add-hook 'js2-mode-hook 'ac-js2-mode)
   (setenv "PAGER" "cat")
+  (setq tern-command '("/usr/local/bin/tern"))
 
   (setq powerline-default-separator nil)
   ;; http://stackoverflow.com/a/37512241/868679

@@ -249,19 +249,19 @@
 	<key>NSWindow Frame Preferences</key>
 	<string>498 351 606 456 0 0 1440 877 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
-	<string>1763 468 400 129 1440 60 1080 1920 </string>
+	<string>-521 1326 400 129 -1222 900 1920 1080 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>1670 1206 620 392 1440 60 1080 1920 </string>
+	<string>-1390 1326 620 392 -1680 180 1200 1920 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>378 40 606 456 0 0 1440 877 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>429 230 937 465 0 0 1440 900 </string>
+	<string>-1411 865 1018 447 -1680 180 1200 1920 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>99 293 592 584 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 449 1440 451 0 0 1440 900 </string>
+	<string>0 279 585 473 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>-480 1209 1194 864 -480 900 1920 1177 </string>
+	<string>-1677 896 585 473 -1680 180 1200 1920 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>0 81 1439 796 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
@@ -2452,6 +2452,8 @@
 	</array>
 	<key>NoSyncCommandHistoryHasEverBeenUsed</key>
 	<true/>
+	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
+	<true/>
 	<key>NoSyncInstallationId</key>
 	<string>12834172-A59A-4A2F-BF6A-5EA7BB879B7E</string>
 	<key>NoSyncLastTipTime</key>
@@ -2489,6 +2491,8 @@
 	<false/>
 	<key>PasteFromClipboard</key>
 	<false/>
+	<key>PasteTabToStringTabStopSize</key>
+	<integer>4</integer>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>
@@ -2543,7 +2547,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-09-28T07:09:02Z</date>
+	<date>2016-11-24T03:04:20Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Secure Input</key>
@@ -2597,6 +2601,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.0.10</string>
+	<string>3.0.12</string>
 </dict>
 </plist>

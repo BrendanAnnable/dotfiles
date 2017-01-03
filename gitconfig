@@ -8,7 +8,7 @@
 	trustExitCode = true
 [user]
 	name = Brendan Annable
-	email = brendan@annable.id.au
+	email = brendan.a@canva.com
 [push]
 	default = current
 [filter "lfs"]
