@@ -49,6 +49,8 @@ alias 'second'="sed '2q;d'"
 alias 'pb'='pbcopy'
 alias 'cpf'='pfd | tr -d "\n" | pbcopy'
 alias 'del'='rmtrash'
+alias 'ij'='idea'
+alias stree='/Applications/SourceTree.app/Contents/Resources/stree'
 
 line() {
     sed "${1}q;d"
