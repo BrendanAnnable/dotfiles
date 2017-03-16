@@ -90,3 +90,7 @@ setopt interactivecomments
 setopt NO_NOMATCH
 
 export PATH="$PATH:/Users/brendan/bin"
+export PATH="$HOME/.yarn/bin:$PATH"
+
+export EDITOR=nvim
+alias vimdiff='nvim -d'
