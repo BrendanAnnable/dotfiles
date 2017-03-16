@@ -13,6 +13,8 @@ Plug 'amix/vim-zenroom2'
 Plug 'scrooloose/nerdtree'
 Plug 'pelodelfuego/vim-swoop'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'lifepillar/vim-solarized8'
+Plug 'blueshirts/darcula'
 call plug#end()
 
 let mapleader=" "
@@ -32,12 +34,16 @@ set wrapscan
 set relativenumber
 set number
 set laststatus=2
-set background=dark
 " Enable mouse in normal mode
 set mouse=n
+set colorcolumn=100
 
 syntax enable
 colorscheme material-theme
+" colorscheme solarized8_dark
+" colorscheme darcula
+set background=dark
+set termguicolors
 
 " Keymaps
 " noremap <Space> @q
@@ -76,6 +82,7 @@ nmap <Leader>w <C-w>
 nmap <Leader>l :call Swoop()<CR>
 vmap <Leader>l :call SwoopSelection()<CR>
 nmap <Leader><Space> :CtrlP<CR>
+" nmap <Leader>tm :terminal<CR>
 
 " Misc
 nnoremap ev :vsplit $MYVIMRC<cr>
