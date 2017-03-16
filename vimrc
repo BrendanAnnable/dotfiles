@@ -43,7 +43,12 @@ colorscheme material-theme
 " colorscheme solarized8_dark
 " colorscheme darcula
 set background=dark
-set termguicolors
+if has("nvim")
+  set termguicolors
+  " https://neovim.io/doc/user/nvim_terminal_emulator.html
+  :tnoremap <Esc> <C-\><C-n>
+endif
+
 
 " Keymaps
 " noremap <Space> @q
@@ -86,7 +91,6 @@ nmap <Leader><Space> :CtrlP<CR>
 
 " Misc
 nnoremap ev :vsplit $MYVIMRC<cr>
-
 
 " Enable airline buffer tabs
 let g:airline#extensions#tabline#enabled = 1
