@@ -51,6 +51,10 @@ alias 'cpf'='pfd | tr -d "\n" | pbcopy'
 alias 'del'='rmtrash'
 alias 'ij'='idea'
 alias stree='/Applications/SourceTree.app/Contents/Resources/stree'
+alias v="nvim"
+alias vi="nvim"
+alias vim="nvim"
+alias cls="tput reset"
 
 line() {
     sed "${1}q;d"
