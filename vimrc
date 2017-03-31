@@ -12,9 +12,11 @@ Plug 'junegunn/goyo.vim'
 Plug 'amix/vim-zenroom2'
 Plug 'scrooloose/nerdtree'
 Plug 'pelodelfuego/vim-swoop'
-Plug 'ctrlpvim/ctrlp.vim'
+" Plug 'ctrlpvim/ctrlp.vim'
 Plug 'lifepillar/vim-solarized8'
 Plug 'blueshirts/darcula'
+Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
+Plug 'wesQ3/vim-windowswap'
 call plug#end()
 
 let mapleader=" "
@@ -86,8 +88,14 @@ nmap <Leader>t :bnext<CR>
 nmap <Leader>w <C-w>
 nmap <Leader>l :call Swoop()<CR>
 vmap <Leader>l :call SwoopSelection()<CR>
-nmap <Leader><Space> :CtrlP<CR>
+nmap <Leader><Space> :FZF<CR>
 " nmap <Leader>tm :terminal<CR>
+"
+" https://github.com/wesQ3/vim-windowswap
+let g:windowswap_map_keys = 0 "prevent default bindings
+nnoremap <silent> <leader>yw :call WindowSwap#MarkWindowSwap()<CR>
+nnoremap <silent> <leader>pw :call WindowSwap#DoWindowSwap()<CR>
+nnoremap <silent> <leader>ww :call WindowSwap#EasyWindowSwap()<CR>
 
 " Misc
 nnoremap ev :vsplit $MYVIMRC<cr>

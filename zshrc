@@ -55,6 +55,7 @@ alias v="nvim"
 alias vi="nvim"
 alias vim="nvim"
 alias cls="tput reset"
+alias halp="git for-each-ref --count=30 --sort=-committerdate refs/heads --format='%(HEAD)%(color:yellow)%(refname:short)|%(color:bold green)%(committerdate:relative)|%(color:blue)%(subject)|%(color:magenta)%(authorname)%(color:reset)' |column -ts'|'"
 
 line() {
     sed "${1}q;d"
@@ -94,3 +95,11 @@ export PATH="$HOME/.yarn/bin:$PATH"
 
 export EDITOR=nvim
 alias vimdiff='nvim -d'
+
+# https://github.com/junegunn/fzf
+export FZF_DEFAULT_COMMAND='
+  (git ls-tree -r --name-only HEAD ||
+   find . -path "*/\.*" -prune -o -type f -print -o -type l -print |
+      sed s/^..//) 2> /dev/null'
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
