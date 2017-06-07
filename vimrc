@@ -17,6 +17,7 @@ Plug 'lifepillar/vim-solarized8'
 Plug 'blueshirts/darcula'
 Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
 Plug 'wesQ3/vim-windowswap'
+Plug 'leafgarland/typescript-vim'
 call plug#end()
 
 let mapleader=" "
