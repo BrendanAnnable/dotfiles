@@ -94,8 +94,8 @@ nmap <Leader><Space> :FZF<CR>
 "
 " https://github.com/wesQ3/vim-windowswap
 let g:windowswap_map_keys = 0 "prevent default bindings
-nnoremap <silent> <leader>yw :call WindowSwap#MarkWindowSwap()<CR>
-nnoremap <silent> <leader>pw :call WindowSwap#DoWindowSwap()<CR>
+nnoremap <silent> <leader>wy :call WindowSwap#MarkWindowSwap()<CR>
+nnoremap <silent> <leader>wp :call WindowSwap#DoWindowSwap()<CR>
 nnoremap <silent> <leader>ww :call WindowSwap#EasyWindowSwap()<CR>
 
 " Misc
