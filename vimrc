@@ -99,7 +99,7 @@ nnoremap <silent> <leader>wp :call WindowSwap#DoWindowSwap()<CR>
 nnoremap <silent> <leader>ww :call WindowSwap#EasyWindowSwap()<CR>
 
 " Misc
-nnoremap ev :vsplit $MYVIMRC<cr>
+nnoremap <Leader>ev :vsplit $MYVIMRC<cr>
 
 " Enable airline buffer tabs
 let g:airline#extensions#tabline#enabled = 1
