@@ -1,38 +1,63 @@
 [core]
-	excludesfile = /Users/brendan/.gitignore_global
+  excludesfile = /Users/brendan/.gitignore_global
 [difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+  cmd = /usr/local/bin/ksdiff -w \"$LOCAL\" \"$REMOTE\"
+  path =
 [mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+  cmd = /usr/local/bin/ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+  trustExitCode = true
 [user]
-	name = Brendan Annable
-	email = brendan.a@canva.com
+  name = Brendan Annable
+  email = brendan.a@canva.com
 [push]
-	default = current
+  default = current
+  followTags = true
 [filter "lfs"]
-	smudge = git-lfs smudge %f
-	required = true
-	clean = git-lfs clean %f
+  smudge = git-lfs smudge -- %f
+  required = true
+  clean = git-lfs clean -- %f
+  process = git-lfs filter-process
 [alias]
   # https://git-scm.com/book/en/v2/Git-Basics-Git-Aliases
-	co = checkout
-	br = branch
-	ci = commit
-	st = status
-	rb = rebase
+  co = checkout
+  br = branch
+  ct = commit
+  st = status
+  rb = rebase
+  cp = cherry-pick
   au = add -u
-	rbc = rebase --continue
-	rba = rebase --abort
-	unstage = reset HEAD --
-	last = log -1 HEAD
-	rbm = !git fetch origin master && git rebase origin/master
-	rbg = !git fetch origin green && git rebase origin/green
+  amd = commit --amend
+  rbc = rebase --continue
+  rba = rebase --abort
+  unstage = reset HEAD --
+  last = log -1 HEAD
+  rbm = rebase origin/master
+  rbg = rebase origin/green
   hash = rev-parse --short --sq HEAD
   gethash = !git hash | pbcopy
   d = diff --cached
   fix = commit --amend --no-edit
-  fixu = !git add -u && git commit --amend --no-edit
-  down = fetch --all --prune
+  fixu = commit --all --amend --no-edit
+  down = fetch --prune
   dn = !git down
+  rhd = reset --hard
+  rst = reset --soft
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  diffbase = "!git diff --name-only HEAD $(git merge-base HEAD origin/master)"
+  go = push home --all --no-verify --force
+  b = "!git for-each-ref --sort=-committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))' | head -n ${1:-20}"
+[mergetool "Kaleidoscope"]
+  cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+  trustexitcode = true
+[merge]
+  tool = Kaleidoscope
+[difftool "Kaleidoscope"]
+  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[difftool]
+  prompt = false
+[mergetool]
+  prompt = false
+[diff]
+  tool = Kaleidoscope
+[commit]
+  template = /Users/brendan/.stCommitMsg
