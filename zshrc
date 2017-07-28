@@ -74,6 +74,11 @@ ports() {
     fi
 }
 
+base() {
+  branch="${1:-master}"
+  git merge-base HEAD "origin/${branch}"
+}
+
 # Canva
 source ~/.canva.zsh
 
@@ -91,7 +96,7 @@ setopt interactivecomments
 setopt NO_NOMATCH
 
 export PATH="$PATH:/Users/brendan/bin"
-export PATH="$HOME/.yarn/bin:$PATH"
+export PATH="$(yarn global bin):$PATH"
 
 export EDITOR=nvim
 alias vimdiff='nvim -d'
