@@ -79,12 +79,6 @@ base() {
   git merge-base HEAD "origin/${branch}"
 }
 
-# Canva
-source ~/.canva.zsh
-
-# AWS
-source /usr/local/share/zsh/site-functions/_aws
-
 alias sudo='sudo '
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
