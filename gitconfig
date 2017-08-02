@@ -39,7 +39,9 @@
   fix = commit --amend --no-edit
   fixu = commit --all --amend --no-edit
   down = fetch --prune
+  downall = fetch --all --prune
   dn = !git down
+  dna = !git downall
   rhd = reset --hard
   rst = reset --soft
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
