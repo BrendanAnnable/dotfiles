@@ -40,6 +40,7 @@ set laststatus=2
 " Enable mouse in normal mode
 set mouse=n
 set colorcolumn=100
+set incsearch
 
 syntax enable
 colorscheme material-theme
