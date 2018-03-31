@@ -67,6 +67,8 @@ nmap <Leader>b :action Git.Branches<CR>
 nmap <Leader>c :action GotoClass<CR>
 nmap <Leader>n :action GotoFile<CR>
 nmap <Leader>p :action RecentFiles<CR>
+nmap <Leader>e :action GotoNextError<CR>
+nmap ge :action GotoNextError<CR>
 "nmap <Leader><Space> :action RecentFiles<CR>
 "nmap <Leader>p :action Git.Pull<CR>
 "nmap <Leader>P :action Vcs.Push<CR>
