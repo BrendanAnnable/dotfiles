@@ -48,6 +48,8 @@
   diffbase = "!git diff --name-only HEAD $(git merge-base HEAD origin/master)"
   go = push home --all --no-verify --force
   b = "!git for-each-ref --sort=-committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))' | head -n ${1:-10} #"
+  track = "!git branch --set-upstream-to=\"origin/$(git rev-parse --abbrev-ref HEAD)\""
+  ff = "!git merge origin/$(git rev-parse --abbrev-ref HEAD) --ff-only"
 [mergetool "Kaleidoscope"]
   cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
   trustexitcode = true
