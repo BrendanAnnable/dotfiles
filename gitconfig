@@ -38,7 +38,7 @@
   d = diff --cached
   fix = commit --amend --no-edit
   fixu = commit --all --amend --no-edit
-  down = fetch --prune
+  down = fetch origin --prune
   downall = fetch --all --prune
   dn = !git down
   dna = !git downall
