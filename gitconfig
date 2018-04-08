@@ -8,7 +8,7 @@
   trustExitCode = true
 [user]
   name = Brendan Annable
-  email = brendan.a@annable.me
+  email = brendan@annable.me
 [push]
   default = current
   followTags = true
