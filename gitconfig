@@ -49,7 +49,7 @@
   go = push home --all --no-verify --force
   b = "!git for-each-ref --sort=-committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))' | head -n ${1:-10} #"
   track = "!git branch --set-upstream-to=\"origin/$(git rev-parse --abbrev-ref HEAD)\""
-  ff = "!git merge origin/$(git rev-parse --abbrev-ref HEAD) --ff-only"
+  ff = "!git merge ${1:-origin}/$(git rev-parse --abbrev-ref HEAD) --ff-only #"
   squash = "!git rst HEAD~${1:-1} && git fix #"
 [mergetool "Kaleidoscope"]
   cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
