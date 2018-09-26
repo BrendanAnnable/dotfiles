@@ -54,6 +54,8 @@ alias stree='/Applications/SourceTree.app/Contents/Resources/stree'
 alias v="nvim"
 alias vi="nvim"
 alias vim="nvim"
+alias par="parallel"
+alias pp="prettyping"
 alias cls="tput reset"
 alias halp="git for-each-ref --count=30 --sort=-committerdate refs/heads --format='%(HEAD)%(color:yellow)%(refname:short)|%(color:bold green)%(committerdate:relative)|%(color:blue)%(subject)|%(color:magenta)%(authorname)%(color:reset)' |column -ts'|'"
 
@@ -102,3 +104,12 @@ export FZF_DEFAULT_COMMAND='
       sed s/^..//) 2> /dev/null'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+bindkey -M vicmd v edit-command-line
+
+eval "$(fasd --init auto)"
+
+j() {
+  local dir
+  dir="$(fasd -Rdl "$1" | fzf -1 -0 --no-sort +m)" && cd "${dir}" || return 1
+}
