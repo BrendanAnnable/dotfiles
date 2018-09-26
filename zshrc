@@ -1,12 +1,5 @@
-#
-# Executes commands at the start of an interactive session.
-#
-# Authors:
-#   Sorin Ionescu <sorin.ionescu@gmail.com>
-#
-
 # File colors
-path=("$(brew --prefix coreutils)"/libexec/gnubin $path)
+path=(/usr/local/opt/coreutils/libexec/gnubin $path)
 [[ -r ~/.dir_colors ]] && eval "$(dircolors ~/.dir_colors)"
 
 # Source Prezto.
@@ -14,8 +7,6 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-# Customize to your needs...
-#
 setopt APPEND_HISTORY
 unsetopt SHARE_HISTORY
 
@@ -92,7 +83,6 @@ setopt interactivecomments
 setopt NO_NOMATCH
 
 export PATH="$PATH:/Users/brendan/bin"
-export PATH="$(yarn global bin):$PATH"
 
 export EDITOR=nvim
 alias vimdiff='nvim -d'
