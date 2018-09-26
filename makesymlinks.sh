@@ -4,7 +4,7 @@
 
 dir="$HOME/dotfiles"
 olddir="$HOME/dotfiles/old"
-files="bash_profile gitignore_global zpreztorc zshrc gitconfig ideavimrc vimrc zprofile dir_colors ackrc canva.zsh tab.bash spacemacs"
+files="bash_profile gitignore_global zpreztorc zshrc gitconfig ideavimrc vimrc zprofile dir_colors ackrc spacemacs"
 
 # create dotfiles_old in homedir
 # echo -n "Creating $olddir for backup of any existing dotfiles in ~ ..."
