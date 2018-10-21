@@ -41,6 +41,7 @@ set laststatus=2
 set mouse=n
 set colorcolumn=100
 set incsearch
+set spell spelllang=en_gb
 
 syntax enable
 colorscheme material-theme
