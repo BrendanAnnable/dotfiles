@@ -43,6 +43,7 @@
   dn = !git down
   dna = !git downall
   rhd = reset --hard
+  rr = "!git reset --hard \"${1:-origin}/$(git rev-parse --abbrev-ref HEAD)\" #"
   rst = reset --soft
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   diffbase = "!git diff --name-only HEAD $(git merge-base HEAD origin/master)"
