@@ -86,6 +86,7 @@ setopt interactivecomments
 setopt NO_NOMATCH
 
 export PATH="$PATH:/Users/brendan/bin"
+export PATH="$PATH:/Users/brendan/node_modules/.bin"
 
 export EDITOR=nvim
 alias vimdiff='nvim -d'
