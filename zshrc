@@ -49,6 +49,9 @@ alias par="parallel"
 alias pp="prettyping"
 alias cls="tput reset"
 alias halp="git for-each-ref --count=30 --sort=-committerdate refs/heads --format='%(HEAD)%(color:yellow)%(refname:short)|%(color:bold green)%(committerdate:relative)|%(color:blue)%(subject)|%(color:magenta)%(authorname)%(color:reset)' |column -ts'|'"
+alias gs="git stash"
+alias gsa="git stash apply"
+alias gsp="git stash pop"
 
 line() {
     sed "${1}q;d"
