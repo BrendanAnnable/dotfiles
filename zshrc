@@ -111,3 +111,7 @@ j() {
 url() {
   curl 1260.me/u -s -S -F "url=${1}"
 }
+
+qr() {
+  qrcode-terminal "$@"
+}
