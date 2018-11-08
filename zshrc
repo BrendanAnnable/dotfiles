@@ -106,3 +106,7 @@ j() {
   local dir
   dir="$(fasd -Rdl "$1" | fzf -1 -0 --no-sort +m --reverse --height=20)" && cd "${dir}" || return 1
 }
+
+url() {
+  curl 1260.me/u -F "url=${1}"
+}
