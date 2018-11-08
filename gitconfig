@@ -51,7 +51,7 @@
   b = "!git for-each-ref --sort=-committerdate --count=\"${1:-10}\" refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'"
   me = "!git for-each-ref --sort=-committerdate --count=\"${1:-10}\" 'refs/heads/annable' 'refs/remotes/origin/annable' --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'"
   track = "!git branch --set-upstream-to=\"${1:-origin}/$(git rev-parse --abbrev-ref HEAD)\" #"
-  ff = "!git merge ${1:-origin}/$(git rev-parse --abbrev-ref HEAD) --ff-only #"
+  ff = "!git merge \"${1:-origin}/$(git rev-parse --abbrev-ref HEAD)\" --ff-only #"
   squash = "!git rst HEAD~${1:-1} && git fix #"
 [mergetool "Kaleidoscope"]
   cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
