@@ -53,6 +53,7 @@
   track = "!git branch --set-upstream-to=\"${1:-origin}/$(git rev-parse --abbrev-ref HEAD)\" #"
   ff = "!git merge \"${1:-origin}/$(git rev-parse --abbrev-ref HEAD)\" --ff-only #"
   squash = "!git rst HEAD~${1:-1} && git fix #"
+  rel = "!git branch --list 'origin/release-*' --remote --sort=committerdate | grep -v -E -e '-cn$' | uniq | tail -${1:-7} #"
 [mergetool "Kaleidoscope"]
   cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
   trustexitcode = true
