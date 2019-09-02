@@ -109,7 +109,7 @@ j() {
 }
 
 url() {
-  curl 1260.me/u -s -S -F "url=${1}"
+  curl 1260.me/u --silent --show-error --form "url=${1}"
 }
 
 qr() {
