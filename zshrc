@@ -113,5 +113,5 @@ url() {
 }
 
 qr() {
-  qrcode-terminal "$@"
+  npx qrcode-terminal "$@"
 }
